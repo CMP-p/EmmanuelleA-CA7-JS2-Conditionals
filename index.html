@@ -17,23 +17,27 @@
     </div>
     <script type="text/javascript"> //MIME tpye
         
-        { // Greet user by input name
+        // Greet user by input name
         const YourName = prompt('Welcome to Bear Hunter Ninja! Please Enter your name to get started: ');
         let msgGreet = `Hi ${YourName}! Let\'s Play!!`; //assignment requires this, likley isn't neccessary with template literal.
         alert(msgGreet);
-        }
+        
 
         
-        { // Generates User and CPU choice
+        // Generates User and CPU choice
         let yourChoice = prompt('Who are you: Bear, Ninja, or Hunter?');
         const computerChoice = 'bear'; //This is what you meant by hard coded correct? const bc hardcoded
-        }
+        
         
 
-        {// Evaluates & compares choices
+        // Evaluates & compares choices
         /* Bear beat Ninja beat Hunter beat Bear */
         let gameWinner;
-        if (yourChoice === "bear" && computerChoice !== 'hunter') {
+        if (yourChoice/*.lower*/ === computerChoice) {
+            //tie
+            gameWinner = null
+        }
+        else if (yourChoice === "bear" && computerChoice !== 'hunter') {
             gameWinner = true; 
         }
         else if (yourChoice === 'ninja' && computerChoice !== 'bear') {
@@ -43,31 +47,34 @@
             gameWinner = true;
         }
         else gameWinner = false;
-        }
+        
 
-
+        let result;
         switch (gameWinner) {
-            case true:
-                console.log('You Win!!')                
+            case null:
+                result = 'You Tie!!'
+                break;
+                case true:
+                result = 'You Win!!'
                 break;
             case false:
-                console.log('You Lose!!')
-                break
+                result = 'You Lose!!'
+                break;
             default:
-                console.error('Error occured, please check code')
+                console.error('Error occured, please check code•••')
                 break;
         }
 
-        
+
         //craft messages
-        {let nameAndChoice = YourName + ', you picked ' + yourChoice + '!';
+        let nameAndChoice = YourName + ', you picked ' + yourChoice + '!';
         let pcAndChoice = `The computer picked ${computerChoice}!`;
-        }
+        
         
         // Print messages to DOM
-        {document.getElementById('user').innerHTML = nameAndChoice;
+        document.getElementById('user').innerHTML = nameAndChoice;
         document.getElementById('pc').innerHTML= pcAndChoice;
-        }
+        
 
         // Print/log messages to console
         {console.log(nameAndChoice,'\n',pcAndChoice);}
