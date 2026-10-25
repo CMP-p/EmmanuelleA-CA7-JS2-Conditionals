@@ -1,0 +1,78 @@
+/* 
+INIT
+*/
+/* * {
+    border: 1px dashed red;
+}
+
+html {
+    border: none;
+} */
+
+/* centers first card/game */
+body {
+    /* border: 1px dotted skyblue; */
+    background-color:rgb(170, 125, 0);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Centeres contents within */
+div.card{
+    border: 2px solid rgb(36, 35, 35);
+    background-color:rgb(103, 114, 0);
+    margin: 20px;
+    border-radius: 5px;
+
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1.title{
+    font-family: cursive;
+    text-decoration: underline;
+    font-size: 140%;
+
+    background-color: rgba(120,120,80,0.3);
+
+    border-radius: 0px 0px 20px 20px;
+    border-bottom: 3px solid #000a; 
+    border-top: 3px solid #000a;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 70px;
+}
+
+/* says menu, is really more the results */
+div.menu {
+    background-image: linear-gradient(rgba(155,155,155,0.5), rgba(50,50,50,0.5));
+    border: 1px solid black;
+    border-radius: 0.3em;
+    padding: 10px;
+    margin: 20px;
+
+    max-width: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+p.choice{
+    font-family: sans-serif;
+    color: #000;
+    text-decoration: underline black;
+    font-size: 20px;
+}
+
+#user {
+    color: #7f4;
+}
+
+#pc {
+    color: #f44;
+}

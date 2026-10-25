@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shink-to-fit=no"> <!--shrink to fit stil needed?-->
+    <meta name="author" content="Emmanuelle Allen">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">My Bear-Hunnter-Ninja game</h1>
+        <div class="menu">
+            <p class="choice" id="user"></p>
+            <p class="choice" id="pc"></p>
+        </div>
+    </div>
+    <script type="text/javascript"> //MIME tpye
+        
+        { // Greet user by input name
+        const YourName = prompt('Welcome to Bear Hunter Ninja! Please Enter your name to get started: ');
+        let msgGreet = `Hi ${YourName}! Let\'s Play!!`; //assignment requires this, likley isn't neccessary with template literal.
+        alert(msgGreet);
+        }
+
+        
+        { // Generates User and CPU choice
+        let yourChoice = prompt('Who are you: Bear, Ninja, or Hunter?');
+        const computerChoice = 'bear'; //This is what you meant by hard coded correct? const bc hardcoded
+        }
+        
+
+        {// Evaluates & compares choices
+        /* Bear beat Ninja beat Hunter beat Bear */
+        let gameWinner;
+        if (yourChoice === "bear" && computerChoice !== 'hunter') {
+            gameWinner = true; 
+        }
+        else if (yourChoice === 'ninja' && computerChoice !== 'bear') {
+            gameWinner = true;
+        }
+        else if (yourChoice === 'hunter' && computerChoice !== 'ninja') {
+            gameWinner = true;
+        }
+        else gameWinner = false;
+        }
+
+
+        switch (gameWinner) {
+            case true:
+                console.log('You Win!!')                
+                break;
+            case false:
+                console.log('You Lose!!')
+                break
+            default:
+                console.error('Error occured, please check code')
+                break;
+        }
+
+        
+        //craft messages
+        {let nameAndChoice = YourName + ', you picked ' + yourChoice + '!';
+        let pcAndChoice = `The computer picked ${computerChoice}!`;
+        }
+        
+        // Print messages to DOM
+        {document.getElementById('user').innerHTML = nameAndChoice;
+        document.getElementById('pc').innerHTML= pcAndChoice;
+        }
+
+        // Print/log messages to console
+        {console.log(nameAndChoice,'\n',pcAndChoice);}
+
+    </script>
+<!-- 
+1. Present a text field to gather user input.
+
+2. Store the user's input in a variable.
+
+3. Put together messages for the players that combine text and the values of the variables from the user input (concatenation).
+
+4. Output the concatenated strings using two (2) different output methods.
+ -->
+
+<!-- 
+1. Must use all New Concepts listed above.  You may need more, however that is the base requirement.
+
+2. The game play must be exactly as above specification.  All screens must match the pictures above, except for the hash along the top of the alert.
+
+3. The wording and punctuation on the UI must be exactly as in the specification.
+
+4. In this first version (prototype) of the game the computer’s choice is hard-coded to “Bear”.
+
+5. As the first iteration, we will be adding to this, so it is IMPERATIVE that you follow this specification EXPLICITLY so that future additions work.  Any variations will be penalized. 
+
+6. There is no room for interpretation, personalization, or variation of any type from this specification.
+
+7. The user choice must come from the prompt() input as do all user inputs.
+
+8. Do NOT use functions of any type!  If you use functions you will receive a zero for the assignment!  We will eventually use functions, but not now!  Learn to code first.
+
+9. Comment your code.  Include comments that describe what each thing is doing.
+
+10. Use your own variable names don't copy over the examples unmodified. Variable names shall be meaningful.
+
+11.For this iteration of the game, don't worry about invalid input, i.e. typos and varying cases, etc. We'll manage that in a future phase of building the game.
+ -->
+</body>
+</html>
