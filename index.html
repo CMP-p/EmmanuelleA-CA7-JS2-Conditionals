@@ -2,48 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shink-to-fit=no"> <!--shrink to fit stil needed?-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="author" content="Emmanuelle Allen">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
 </head>
 <body>
     <div class="card">
-        <h1 class="title">My Bear-Hunnter-Ninja game</h1>
+        <h1 class="title">My Bear-Hunter-Ninja game</h1>
         <div class="menu">
             <p class="choice" id="user">User:</p>
-            <p class="choice" id="pc">computer:</p>
+            <p class="choice" id="pc">Computer:</p>
             <p class="choice" id="result">Result:</p>
         </div>
     </div>
-    <script type="text/javascript"> //MIME tpye
+    <script type="text/javascript"> //MIME type
         
         // Greet user by input name
         const YourName = prompt('Welcome to Bear Hunter Ninja! Please Enter your name to get started: ');
-        let msgGreet = `Hi ${YourName}! Let\'s Play!!`; //assignment requires this, likley isn't neccessary with template literal.
+        let msgGreet = `Hi ${YourName}! Let\'s Play!!`;
         alert(msgGreet);
         
 
         
         // Generates User and CPU choice
-        let yourChoice = prompt('Who are you: Bear, Ninja, or Hunter?')//.toLowerCase(); //no functions yet
-        const computerChoice = 'bear'; //This is what you meant by hard coded correct? const bc hardcoded
+        let yourChoice = prompt('Who are you: Bear, Ninja, or Hunter?')//.toLowerCase(); //no functions() yet
+        const ComputerChoice = 'bear';
         
         
 
         // Evaluates & compares choices
         /* Bear beat Ninja beat Hunter beat Bear */
         let gameWinner; // user oriented variable
-        if (yourChoice === computerChoice) { //tie
+        if (yourChoice === ComputerChoice) { //tie
             gameWinner = null
         }
-        else if (yourChoice === "bear" && computerChoice !== 'hunter') {
+        else if (yourChoice === "bear" && ComputerChoice !== 'hunter') {
             gameWinner = true; 
         }
-        else if (yourChoice === 'ninja' && computerChoice !== 'bear') {
+        else if (yourChoice === 'ninja' && ComputerChoice !== 'bear') {
             gameWinner = true;
         }
-        else if (yourChoice === 'hunter' && computerChoice !== 'ninja') {
+        else if (yourChoice === 'hunter' && ComputerChoice !== 'ninja') {
             gameWinner = true;
         }
         else gameWinner = false;
@@ -68,7 +68,7 @@
 
         //craft messages
         let nameAndChoice = YourName + ', you picked ' + yourChoice + '!';
-        let pcAndChoice = `The computer picked ${computerChoice}!`;
+        let pcAndChoice = `The computer picked ${ComputerChoice}!`;
         result = result //redundant code, for consistency, this is defined in switch statement
         
         
@@ -79,14 +79,14 @@
         
 
         // Print/log messages to console
-        {console.log(
+        console.log(
             nameAndChoice,
             '\n',
             pcAndChoice,
             '\n',
             result
             );
-        }
+        
 
     </script>
 </body>
